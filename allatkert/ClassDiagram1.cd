@@ -3,7 +3,7 @@
   <Class Name="allatkert.Program" Collapsed="true">
     <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAEAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -64,7 +64,7 @@
       <Field Name="Gondozza" />
     </ShowAsAssociation>
   </Class>
-  <Interface Name="allatkert.Pockolos" Collapsed="true">
+  <Interface Name="allatkert.Pockolos">
     <Position X="3.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>

@@ -8,5 +8,10 @@ namespace allatkert
     public class AllatgondoZoo : Ember
     {
         private Allatkert Gondozza;
+
+        public AllatgondoZoo(int Suly) : base(Suly)
+        {
+
+        }
     }
 }

@@ -7,17 +7,7 @@ namespace allatkert
 {
     public abstract class Eloleny : Pockolos
     {
-        public int Suly
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
+        public int Suly { get; set; }
 
         public void Eszik(Eloleny Eledel)
         {

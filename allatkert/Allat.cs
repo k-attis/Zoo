@@ -7,21 +7,11 @@ namespace allatkert
 {
     public class Allat : Eloleny
     {
-        public AllatTipusok Tipus
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
+        public AllatTipusok Tipus { get; set; }
 
         public override bool Pockol()
         {
-            throw new System.NotImplementedException();
+            return false;
         }
     }
 }
