@@ -30,7 +30,7 @@ namespace allatkert
 
             // generálás
             for (int k = 0; k < 5; k++)
-                for (int i = 0; i < 1; i++)
+                for (int i = 0; i < 10; i++)
                 {
                     Allat al = new Allat();
                     al.Tipus = (AllatTipusok)k;
@@ -38,7 +38,9 @@ namespace allatkert
                     a.Ketrec[k].Lenyek.Add(al);
                 }
 
-            for (int i = 0; i < 10; i++)
+            int emberszam = 10;
+
+            for (int i = 0; i < emberszam; i++)
             {
                 a.Lenyek.Add(new Ember(rnd.Next(3, 200)));
             }
@@ -50,6 +52,7 @@ namespace allatkert
             a.Listazas();
             Console.ReadKey();
 
+            /*
             for (int i = a.Lenyek.Count; i > 0; i--)
             {
                 Eloleny e = a.Lenyek[i - 1];
@@ -58,6 +61,52 @@ namespace allatkert
                 {
                     a.Ketrec[(int)((Allat)e).Tipus].Lenyek.Add(e);
                     a.Lenyek.RemoveAt(i - 1);
+                }
+            }*/
+
+            while (true)
+            {
+                Eloleny e1 = a.Lenyek[rnd.Next(a.Lenyek.Count)];
+                bool e1isAllat = e1.Pockol() == false;
+
+                Eloleny e2 = a.Lenyek[rnd.Next(a.Lenyek.Count)];
+                bool e2isAllat = !e2.Pockol();
+
+                if (e1 != e2)
+                {
+
+                    if (
+                        e1isAllat && e2isAllat
+                       )
+                    {
+                        if (e1.Suly < e2.Suly)
+                        {
+                            e2.Eszik(e1);
+                            a.Lenyek.Remove(e1);
+                        }
+                        else
+                        {
+                            e1.Eszik(e2);
+                            a.Lenyek.Remove(e2);
+                        }
+                    }
+                    else
+                        if (
+                        (a.Lenyek.Count <= (emberszam + 1)) && (e1isAllat || e2isAllat)
+                        )
+                    {
+                        if (e1isAllat)
+                        {
+                            e1.Eszik(e2);
+                            a.Lenyek.Remove(e2);
+                        }
+                        else
+                        {
+                            e2.Eszik(e1);
+                            a.Lenyek.Remove(e1);
+                        }
+
+                    }
                 }
             }
 
