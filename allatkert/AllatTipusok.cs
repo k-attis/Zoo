@@ -7,5 +7,10 @@ namespace allatkert
 {
     public enum AllatTipusok
     {
+        Kecske,
+        Cápa,
+        Páwa,
+        Zsiráf,
+        Kakadu
     }
 }

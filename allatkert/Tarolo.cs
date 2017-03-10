@@ -7,11 +7,14 @@ namespace allatkert
 {
     public class Tarolo
     {
-        private List<Eloleny> Lenyek;
+        public List<Eloleny> Lenyek = new List<Eloleny>();
 
         public virtual void Listazas()
         {
-            throw new System.NotImplementedException();
+            foreach (Eloleny e in Lenyek)
+            {
+                Console.WriteLine("{0} Sulya:{1}", (e.Pockol()) ? ("Ember") : ("Állat"), e.Suly);
+            }
         }
     }
 }

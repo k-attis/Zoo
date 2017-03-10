@@ -9,6 +9,11 @@
   </Class>
   <Class Name="allatkert.Allatkert">
     <Position X="5.5" Y="2.25" Width="1.5" />
+    <AssociationLine Name="Ketrec" Type="allatkert.Tarolo">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.723" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Allatkert.cs</FileName>
@@ -30,7 +35,7 @@
   <Class Name="allatkert.Eloleny">
     <Position X="1.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAICAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Eloleny.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -66,10 +71,10 @@
       <FileName>Pockolos.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="allatkert.AllatTipusok" Collapsed="true">
+  <Enum Name="allatkert.AllatTipusok">
     <Position X="8" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAYAAAAAAAAgAEAAAAAEAAAAAAAA=</HashCode>
       <FileName>AllatTipusok.cs</FileName>
     </TypeIdentifier>
   </Enum>
