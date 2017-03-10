@@ -11,7 +11,12 @@ namespace allatkert
 
         public void Eszik(Eloleny Eledel)
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("Eszik {0},súly{1} Eledel {2},súly{3}",
+                (this.Pockol()) ? ("Ember") : ("Állat"),
+                this.Suly,
+                (Eledel.Pockol()) ? ("Ember") : ("Állat"),
+                Eledel.Suly
+                );
         }
 
         public abstract bool Pockol();

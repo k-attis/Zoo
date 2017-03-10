@@ -52,7 +52,6 @@ namespace allatkert
             a.Listazas();
             Console.ReadKey();
 
-            /*
             for (int i = a.Lenyek.Count; i > 0; i--)
             {
                 Eloleny e = a.Lenyek[i - 1];
@@ -62,14 +61,15 @@ namespace allatkert
                     a.Ketrec[(int)((Allat)e).Tipus].Lenyek.Add(e);
                     a.Lenyek.RemoveAt(i - 1);
                 }
-            }*/
 
-            while (true)
-            {
-                Eloleny e1 = a.Lenyek[rnd.Next(a.Lenyek.Count)];
+                // evés
+
+                int e1idx = rnd.Next(a.Lenyek.Count);
+                Eloleny e1 = a.Lenyek[e1idx];
                 bool e1isAllat = e1.Pockol() == false;
 
-                Eloleny e2 = a.Lenyek[rnd.Next(a.Lenyek.Count)];
+                int e2idx = rnd.Next(a.Lenyek.Count);
+                Eloleny e2 = a.Lenyek[e2idx];
                 bool e2isAllat = !e2.Pockol();
 
                 if (e1 != e2)
@@ -83,11 +83,16 @@ namespace allatkert
                         {
                             e2.Eszik(e1);
                             a.Lenyek.Remove(e1);
+                            if (e1idx < i)
+                                i--;
                         }
                         else
                         {
                             e1.Eszik(e2);
                             a.Lenyek.Remove(e2);
+                            if (e2idx < i)
+                                i--;
+
                         }
                     }
                     else
@@ -99,13 +104,17 @@ namespace allatkert
                         {
                             e1.Eszik(e2);
                             a.Lenyek.Remove(e2);
+                            if (e2idx < i)
+                                i--;
+
                         }
                         else
                         {
                             e2.Eszik(e1);
                             a.Lenyek.Remove(e1);
+                            if (e1idx < i)
+                                i--;
                         }
-
                     }
                 }
             }
